@@ -1,6 +1,6 @@
 version: 2
 jobs:
- spatial:
+ topicos2022:
    machine: true
    resource_class: large
    parallelism: 4
