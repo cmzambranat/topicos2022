@@ -1,7 +1,8 @@
 version: 2
 jobs:
  topicos2022:
-   machine: true
+   machine:
+    image: ubuntu-2004:202111-02
    resource_class: large
    parallelism: 4
    steps:
