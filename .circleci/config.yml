@@ -9,16 +9,16 @@ jobs:
      - run:
            name: "Build topicos with virion container"
            command: |
-            docker build -f Dockerfile.topicos -t cmzambranat/topicos:4.1.3 .
+            docker build -f Dockerfile.topicos -t cmzambranat/topicos2022:4.1.3 .
      - deploy:
            name: "Push to Docker Hub"
            command: |
               if [ "${CIRCLE_BRANCH}" == "main" ]; then
                 docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASS
-                docker push cmzambranat/topicos:4.1.3
+                docker push cmzambranat/topicos2022:4.1.3
               fi
 workflows:
    version: 2
    commit:
      jobs:
-       - topicos
+       - topicos2022
