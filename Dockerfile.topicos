@@ -7,6 +7,10 @@ RUN apt-get update && apt-get install -y --allow-downgrades --allow-remove-essen
     libgeos++-dev \
     libsecret-1-dev \
     htop \
+    libudunits2-dev
+    libgdal-dev \
+    libgeos-dev \
+    libproj-dev \
   && RSTUDIO_URL="https://download2.rstudio.org/server/bionic/amd64/rstudio-server-2022.02.1-461-amd64.deb" \
   && wget -q $RSTUDIO_URL \
   && dpkg -i rstudio-server-*-amd64.deb \
@@ -46,6 +50,7 @@ RUN echo "CFLAGS=-w" >> /usr/local/lib/R/etc/Makevars.site \
   piggyback \
   rasterVis \
   stars \
+  sf \
   taxize \
   taxadb \
   terra \
