@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y --allow-downgrades --allow-remove-essen
     libgeos++-dev \
     libsecret-1-dev \
     htop \
-    libudunits2-dev
+    libudunits2-dev \
     libgdal-dev \
     libgeos-dev \
     libproj-dev \
