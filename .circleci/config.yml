@@ -15,7 +15,7 @@ jobs:
            name: "Push to Docker Hub"
            command: |
               if [ "${CIRCLE_BRANCH}" == "main" ]; then
-                docker login -u $DOCKER_HUB_USER --password-stdin $DOCKER_HUB_PASS
+                docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASS
                 docker push cmzambranat/topicos2022:4.1.3
               fi
 workflows:

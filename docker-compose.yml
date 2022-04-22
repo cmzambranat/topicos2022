@@ -1,13 +1,13 @@
 version: '3.8'
 
 services:
-  topicos:
-    image: "cmzambranat/topicos2022:latest:4.1.3"
+  topicos2022:
+    image: "cmzambranat/topicos2022:4.1.3"
     environment:
       - DISABLE_AUTH=true
       - ROOT=true
     ports:
-      - "98787:8787"                                                         
+      - "1787:8787"                                                         
     volumes:
       - "/Users/carlos/repos:/home/rstudio/repos"
       - "/Users/carlos/.ssh:/home/rstudio/.ssh:ro"
